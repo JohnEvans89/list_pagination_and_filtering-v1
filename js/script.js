@@ -24,44 +24,7 @@ Create a variable to store the number of items to show on each “page”, which
 ***/
 let studentListElements=document.getElementsByClassName("student-item cf");
 let numberOfItems =10;
-
 console.log(studentListElements[0]);
-
-
-
-
-
-/***
-   Create the `showPage` function to hide all of the items in the
-   list except for the ten you want to show.
-
-   To hide all students and show only a particular set of ten, we could create a function that takes
-in parameters for the list (all of the students) it’s supposed to work on, and the "page" that’s
-supposed to be shown. A "page" here just means a list of 10 students: so the first 1-10
-students would be "page 1", students 11-20 appear on "page 2", and so on.
-
-const showPage = (list, page) => {
-
-Loop over items in the list parameter
--- If the index of a list item is >= the index of the first
-item that should be shown on the page
--- && the list item index is <= the index of the last item
-that should be shown on the page, show it
-
-}
-
-   Pro Tips:
-     - Keep in mind that with a list of 54 students, the last page
-       will only display four.
-     - Remember that the first student has an index of 0.
-     - Remember that a function `parameter` goes in the parens when
-       you initially define the function, and it acts as a variable
-       or a placeholder to represent the actual function `argument`
-       that will be passed into the parens later when you call or
-       "invoke" the function
-
-
-***/
 
 const showPage = (list,page) => {
   let startIndex= (page*numberOfItems)-numberOfItems;
