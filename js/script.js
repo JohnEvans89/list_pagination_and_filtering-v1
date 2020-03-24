@@ -21,8 +21,7 @@ This project can be completed with just two global variables
 Create a variable to store the student list item elements in the student list.
 Pro Tip: Log out the variable storing the list to ensure it equals the list of li items and not the container of the li elements.
 Create a variable to store the number of items to show on each “page”, which for this project, is 10.
-***/
-let studentListElements=document.getElementsByClassName("student-item cf");
+***/let studentListElements=document.getElementsByClassName("student-item cf");
 let numberOfItems =10;
 console.log(studentListElements[0]);
 
@@ -39,15 +38,16 @@ const showPage = (list,page) => {
   };
 
 const appendPageLinks = (list) =>{
-  let maxPages=(list.length/numberOfItems);
+  let maxPages=Math.ceil(list.length/numberOfItems);
+  
   let div=document.createElement('div');
-  div.setAttribute("class", "pagination");
- div.appendChild('.page');
+    div.setAttribute("class", "pagination");
+    div.appendChild('.page');
+  
+  let ul = document.createElement('ul'); // create a list of buttons
+    div.appendChild(ul);
 
 }
-
-
-
   showPage(studentListElements,1);
 
 
