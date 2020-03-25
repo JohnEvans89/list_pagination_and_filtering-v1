@@ -45,3 +45,6 @@ const appendPageItems = (list) => {
 		})
 	}
 };
+
+showPage(studentListElements, 1);
+appendPageItems(studentListElements);
