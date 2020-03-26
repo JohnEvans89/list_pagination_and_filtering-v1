@@ -33,7 +33,7 @@ const appendPageItems = (list) => {
 		ul.appendChild(liItem);
 		liItem.appendChild(liAnchor);
 		liAnchor.setAttribute('href', '#');
-		liAnchor.textcontent = x;
+		liAnchor.textContent = x;
 		if (x === 1) {
 			liAnchor.className = 'active';
 		}
