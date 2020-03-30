@@ -26,7 +26,7 @@ const appendPageItems = (list) => {
 	pageDiv.appendChild(div);
 	let ul = document.createElement('ul'); // create a list of buttons
 	div.appendChild(ul);
-	for (x = 1; x < maxPages; x++) {
+	for (x = 1; x <= maxPages; x++) {
 		let liItem = document.createElement("li");
 		let liAnchor = document.createElement("a");
 		liItem.className = 'pagination';
@@ -38,11 +38,11 @@ const appendPageItems = (list) => {
 			liAnchor.className = 'active';
 		}
 		liAnchor.addEventListener('click', (e) => {
-		//	let activeItem = document.querySelector('liAnchor.active');
-//			activeItem.classList.remove('active'); // remove the active class from the active button
-		//	e.target.classList.add('active'); // make a clicked button active
+			let activeItem = document.querySelector(".active");
+		activeItem.classList.remove('active'); // remove the active class from the active button
+		e.target.classList.add('active'); // make a clicked button active
 		var current = document.getElementsByClassName("active");
-		
+
 		this.className += " active";
 			showPage(list, liAnchor.textContent);
 		})
