@@ -15,18 +15,20 @@ const showPage = (list, page) => {
 	let startIndex = (page * numberOfItems) - numberOfItems;
 	// 'endIndex' will be the value of 'numberOfItems'
 	let endIndex = page * numberOfItems;
-	// loop thru the list of studets
+	// Loop thru the list of studets
 	for (let i = 0; i < list.length; i++) {
 		//if the [i] poisition is between 0 and 'numberOfItems' minus 1 - show the content
 		if (i >= startIndex && i < endIndex) {
 			list[i].style.display = 'block';
 		}
-		//else hide it
+		//Else hide it
 		else {
 			list[i].style.display = 'none';
 		}
 	}
 };
+
+//'appendPageItems'
 const appendPageItems = (list) => {
 	let div = document.createElement('div');
 	let pageDiv = document.querySelector('div.page'); //
