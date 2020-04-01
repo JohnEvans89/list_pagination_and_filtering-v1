@@ -3,9 +3,15 @@ Treehouse Techdegree:
 FSJS project 2 - List Filter and Pagination
 ******************************************/
 
+//Assign all the students to the students variable
 const studentListElements = document.querySelectorAll('li.student-item')
+
+//Set the number of students per page - Can be changed in the future to show more per page
 const numberOfItems = 10;
+
+//Set the number of pages needed depeding on the amount of students - ceiling rounds up to allow for lists with an abnormal number (13,24,35, etc.)
 const maxPages = Math.ceil(studentListElements.length / numberOfItems);
+
 
 const showPage = (list, page) => {
 	let startIndex = (page * numberOfItems) - numberOfItems;
