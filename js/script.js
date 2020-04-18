@@ -10,12 +10,20 @@ const numberOfItems = 10;
 const maxPages = Math.ceil(studentListElements.length / numberOfItems);
 // showPage function is used to orgnize what will be shown on the pages
 // It takes 'list' as the entire list of students and 'page' as which page number those students are on
+const test = () =>
+{var iN = document.createElement("input");
+var h2 = document.getElementsByClassName('h2')
+iN.setAttribute("type", "text");
+document.body.appendChild(iN);};
+
+
 const showPage = (list, page) => {
 	//'startindex' will begin at 0, no matter the value of 'numberOfItems'
 	let startIndex = (page * numberOfItems) - numberOfItems;
 	// 'endIndex' will be the value of 'numberOfItems'
 	let endIndex = page * numberOfItems;
 	// Loop thru the list of studets
+
 	for (let i = 0; i < list.length; i++) {
 		//if the [i] poisition is between 0 and 'numberOfItems' minus 1 - show the content
 		if (i >= startIndex && i < endIndex) {
@@ -57,6 +65,10 @@ const appendPageItems = (list) => {
 		})
 	}
 };
+
+
 // Call functions for showing the list with ten items on one page and pagination
 showPage(studentListElements, 1);
 appendPageItems(studentListElements);
+test();
+console.log(studentListElements);
