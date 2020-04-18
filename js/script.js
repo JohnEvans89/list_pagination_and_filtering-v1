@@ -10,8 +10,7 @@ const numberOfItems = 10;
 const maxPages = Math.ceil(studentListElements.length / numberOfItems);
 // showPage function is used to orgnize what will be shown on the pages
 // It takes 'list' as the entire list of students and 'page' as which page number those students are on
-const test = () =>
-{var iN = document.createElement("input");
+const test = () =>{var iN = document.createElement("input");
 var h2 = document.getElementsByClassName('h2')
 iN.setAttribute("type", "text");
 document.body.appendChild(iN);};
